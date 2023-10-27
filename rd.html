@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD Calculator</title>
+  </head>
+  <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 400px;
+      margin: 20vh auto 0 auto;
+      background-image: linear-gradient(
+        to left,
+        rgb(241, 33, 172),
+        rgb(104, 71, 252)
+      );
+      border-radius: 5px;
+      padding: 30px;
+      
+      }
+      h1 {
+        text-align: center;
+      color: rgb(7, 7, 7);
+      }
+      label {
+        display: block;
+        margin: 10px 0;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        background-color: gray;
+      color: white;
+      cursor: pointer;
+      width: 30%;
+      padding: 10px 0;
+      border-radius: 10px;
+      }
+      button:hover {
+        background-color: lightcoral;
+      }
+      #result {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 20px;
+      }
+      .style{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      font-size: 15px;
+      margin-top: 5px;
+      padding: 10px;
+    }
+      
+    </style>
+  </style>
+  <body>
+    <div class="container">
+      <h1>RD Calculator</h1>
+      <div class="style">
+      <label for="principal">Principal Amount (₹):</label>
+      <input
+        type="text"
+        id="principal"
+        placeholder="Enter the principal amount"
+       />
+      <label for="rate">Interest Rate (%):</label>
+      <input
+        type="text"
+        id="rate"
+        placeholder="Enter the annual interest rate"
+      />
+      <label for="time">Time (months):</label>
+      <input type="text" id="time" placeholder="Enter the number of months" /></div>
+      <button onclick="calculateRD()">Calculate</button>
+      <div id="result"></div>
+    </div>
+    <script src="rd.js"></script>
+  </body>
+</html>
